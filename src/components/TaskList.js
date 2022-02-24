@@ -1,9 +1,12 @@
 import React from "react";
+import { TASKS } from "../data";
 import Task from "./Task";
 
 function TaskList(props) {
-
-  const itemList = <Task tas={props.tasks}/>
+  console.log("tasklist.props",props)
+  const itemList = props.tasks.map((task, index)=>{
+    return <Task key={index} tas={task}/>
+  })
 
   return (
     <div className="tasks">
