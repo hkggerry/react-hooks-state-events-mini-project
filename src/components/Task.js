@@ -1,10 +1,10 @@
 import React from "react";
 
-function Task({tas}) {
+function Task({tas, onDelete}) {
   console.log(tas)
 
 function handleDelete(){
-  console.log("delete")
+  onDelete(tas.text)
 }
 
   return (

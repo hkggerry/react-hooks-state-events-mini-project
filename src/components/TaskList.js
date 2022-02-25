@@ -2,9 +2,9 @@ import React from "react";
 import Task from "./Task";
 
 function TaskList(props) {
-  
-  const itemList = props.tasks.map((task, index)=>{
-    return <Task key={index} tas={task}/>
+
+  const itemList = props.tasks.map((task, index) => {
+    return <Task onDelete = {props.onDelete} key={index} tas={task} />
   })
 
   return (
